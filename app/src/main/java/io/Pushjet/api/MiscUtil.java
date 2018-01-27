@@ -71,4 +71,8 @@ public class MiscUtil {
             clipboard.setPrimaryClip(clip);
         }
     }
+
+    public static String trimGenerously(String str){
+        return str.replaceAll("\\p{C}", "");
+    }
 }

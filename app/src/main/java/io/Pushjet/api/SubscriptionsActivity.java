@@ -231,7 +231,7 @@ public class SubscriptionsActivity extends ListActivity {
     }
 
     private void parseTokenOrUri(String token) throws PushjetException {
-        token = token.trim();
+        token = MiscUtil.trimGenerously(token);
         if (PushjetUri.isValidUri(token)) {
             try {
                 token = PushjetUri.tokenFromUri(token);
